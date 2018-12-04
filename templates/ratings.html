@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All Ratings
+{% endblock %}
+
+{% block main %}
+    <h1 align="left">Ratings and Search</h1>
+    <p></p>
+    <table id="all_data" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Class Name</th>
+                <th>Year/Semester</th>
+                <th>Class Size</th>
+                <th>Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+                <tr>
+                    <td>{{ entry.last_name }}, {{ entry.first_name }}</td>
+                    <td>{{ entry.class_name }}</td>
+                    <td>{{ entry.year }} {{ entry.sem }}</td>
+                    <td>{{ entry.class_size }}</td>
+                    <td>{{ entry.avg_rating }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready( function () {
+            $('#all_data').DataTable();
+        } );
+    </script>
+{% endblock %}

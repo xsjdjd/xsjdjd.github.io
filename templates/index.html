@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1 align="left">Q & A:</h1>
+    <div class="container p-4" align="left">
+        <h1>Q1: What is this site?</h1>
+        <p>HLS Course Ratings is basically what the title suggests. It presents data gathered (by a script) about instructors' ratings.</p>
+        <p>The ratings are based on student evaluations.</p>
+
+        <h1>Q2: What kinds of data are displayed?</h1>
+        <p>For now, this website contains:
+            <ol>
+                <li>the professor's name, </li>
+                <li>the course being evaluated, </li>
+                <li>the year/semester of the course, </li>
+                <li>the number of student evaluations for that course, and</li>
+                <li>the average rating of that professor's "effectiveness" in the course.</li>
+            </ol>
+        </p>
+        <p>For now, only evaluations
+            <ol>
+                <li>of courses taught by full-time HLS professors, and </li>
+                <li>were taught on or after 2013</li>
+            </ol>
+            Are included. Some courses might be omitted in the process of data-extraction.
+        </p>
+        <h1>Q3: Where did the data come from?</h1>
+        <p>The data was gathered from <a href="https://hls.harvard.edu/dept/academics/course-evaluation-guide/">HLS student evaluations</a>. HLS Students may log in from the link to access the complete evaluations.</p>
+
+        <h1>Q4: When was the data gathered?</h1>
+        <p>The data was last updated on Dec. 3, 2018.</p>
+    </div>
+{% endblock %}
